@@ -20,5 +20,3 @@ When I'm not architecting AI systems, I am a heavy gamer and hip-hop head.
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![Cursor](https://img.shields.io/badge/Cursor-Auto_Pilot-black?style=for-the-badge&logo=openai&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-### 📊 Github Stats
-![XiaoCow's GitHub stats](https://github-readme-stats.vercel.app/api?username=XiaoCow666&show_icons=true&theme=radical)
