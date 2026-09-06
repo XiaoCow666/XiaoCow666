@@ -1,7 +1,10 @@
 # 小靠 / XiaoCow
 
 <p align="center">
-  <img src="./assets/profile-banner.svg" alt="XiaoCow — build tools that turn answers into understanding" width="100%" />
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile-banner.svg" />
+    <img src="./assets/profile-banner.gif" alt="XiaoCow animated hello — XiaoCow, 小靠, 小牛老师" width="100%" />
+  </picture>
 </p>
 
 <p align="center">
