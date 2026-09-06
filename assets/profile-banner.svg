@@ -1,0 +1,37 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="30" y1="20" x2="1140" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="0.52" stop-color="#152B4D"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="140" y1="60" x2="1030" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#5EEAD4" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="1020" cy="70" r="135" fill="#22D3EE" fill-opacity="0.15" filter="url(#blur)"/>
+  <circle cx="180" cy="300" r="150" fill="#6366F1" fill-opacity="0.16" filter="url(#blur)"/>
+  <path d="M55 265C205 172 275 287 418 209C548 139 590 225 706 157C839 80 929 196 1146 78" stroke="url(#glow)" stroke-width="2"/>
+  <path d="M55 285C205 192 275 307 418 229C548 159 590 245 706 177C839 100 929 216 1146 98" stroke="#93C5FD" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="5 9"/>
+  <g opacity="0.95">
+    <circle cx="178" cy="188" r="7" fill="#5EEAD4"/>
+    <circle cx="418" cy="209" r="6" fill="#60A5FA"/>
+    <circle cx="706" cy="157" r="7" fill="#A7F3D0"/>
+    <circle cx="962" cy="138" r="5" fill="#BAE6FD"/>
+    <path d="M178 188L418 209L706 157L962 138" stroke="#67E8F9" stroke-opacity="0.32" stroke-width="1"/>
+  </g>
+  <text x="78" y="92" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="3">AI-NATIVE BUILDER / 学习系统 / AGENTS</text>
+  <text x="78" y="166" fill="white" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="62" font-weight="700">XiaoCow</text>
+  <text x="82" y="208" fill="#BFDBFE" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24">Building tools that help people learn, ship, and think.</text>
+  <text x="82" y="244" fill="#CCFBF1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18">把 AI 放进真实项目，也把真实问题带回代码里。</text>
+  <g transform="translate(890 235)">
+    <rect width="220" height="58" rx="15" fill="#0B1020" fill-opacity="0.55" stroke="#99F6E4" stroke-opacity="0.3"/>
+    <text x="22" y="25" fill="#99F6E4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">ship / inspect / learn</text>
+    <text x="22" y="44" fill="#E0F2FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">v0.∞ — still in progress</text>
+  </g>
+</svg>
