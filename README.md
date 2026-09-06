@@ -1,10 +1,7 @@
 # 小靠 / XiaoCow
 
 <p align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile-banner.svg" />
-    <img src="./assets/profile-banner.gif" alt="XiaoCow animated hello — XiaoCow, 小靠, 小牛老师" width="100%" />
-  </picture>
+  <img src="./assets/profile-hero-abstract.png" alt="Abstract flow of learning, building, and turning ideas into action" width="100%" />
 </p>
 
 <p align="center">
@@ -43,7 +40,12 @@ late 2024  Cursor
 ### 让代码评测离“对 / 错”再近一点学习
 
 <p align="center">
-  <a href="https://github.com/XiaoCow666/CodeSense"><img src="./assets/codesense/logo.png" alt="CodeSense logo" width="430" /></a>
+  <a href="https://github.com/XiaoCow666/CodeSense">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/codesense/logo-dark.png" />
+      <img src="./assets/codesense/logo.png" alt="CodeSense logo" width="430" />
+    </picture>
+  </a>
 </p>
 
 [CodeSense](https://github.com/XiaoCow666/CodeSense) 是一个面向高校编程教学的代码评测与学习平台。
@@ -81,7 +83,12 @@ late 2024  Cursor
 我对它感兴趣，是因为财商教育经常被讲成表格和结论，但真实的选择往往夹着犹豫、冲动和“我知道这样不太好，可是……”这类时刻。项目正在探索对话式学习、知识库、风险提醒和行动计划，让建议更接近一个人下一步真的能做的事。
 
 <p align="center">
-  <a href="https://github.com/XiaoCow666/Caifusi"><img src="./assets/caifusi/logo.png" alt="Caifusi logo" width="300" /></a>
+  <a href="https://github.com/XiaoCow666/Caifusi">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/caifusi/logo-dark.png" />
+      <img src="./assets/caifusi/logo.png" alt="Caifusi logo" width="300" />
+    </picture>
+  </a>
 </p>
 
 <p align="center">
@@ -161,8 +168,8 @@ AI 教学工具、Agent 工程、MCP、代码评测、联邦学习、公平与�
 ## GitHub 入口
 
 <p align="center">
-  <a href="https://github.com/XiaoCow666/CodeSense"><img src="./assets/repo-codesense.svg" alt="CodeSense repository card" width="48%" /></a>
-  <a href="https://github.com/XiaoCow666/Caifusi"><img src="./assets/repo-caifusi.svg" alt="Caifusi repository card" width="48%" /></a>
+  <a href="https://github.com/XiaoCow666/CodeSense"><img src="./assets/repo-codesense-card.png" alt="CodeSense repository card" width="48%" /></a>
+  <a href="https://github.com/XiaoCow666/Caifusi"><img src="./assets/repo-caifusi-card.png" alt="Caifusi repository card" width="48%" /></a>
 </p>
 
 <p align="center">
@@ -175,8 +182,6 @@ AI 教学工具、Agent 工程、MCP、代码评测、联邦学习、公平与�
   <a href="https://github.com/XiaoCow666"><img src="https://img.shields.io/github/followers/XiaoCow666?style=social" alt="GitHub followers" /></a>
   <a href="https://github.com/XiaoCow666?tab=repositories"><img src="https://img.shields.io/github/stars/XiaoCow666?affiliations=OWNER&style=social" alt="GitHub stars" /></a>
 </p>
-
-我不会在这里写一串没有证据的数字。奖项、用户数、部署规模和实验指标，应该能回到仓库、日志、证书或公开公告里。
 
 <p align="center">
   <i>Still learning. Still shipping. Still keeping the weird bug screenshots.</i>
