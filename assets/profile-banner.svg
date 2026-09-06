@@ -1,37 +1,112 @@
 <svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="30" y1="20" x2="1140" y2="340" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1020"/>
-      <stop offset="0.52" stop-color="#152B4D"/>
-      <stop offset="1" stop-color="#0F766E"/>
+    <linearGradient id="bg" x1="40" y1="20" x2="1180" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070C18"/>
+      <stop offset="0.56" stop-color="#0D1930"/>
+      <stop offset="1" stop-color="#073B4B"/>
     </linearGradient>
-    <linearGradient id="glow" x1="140" y1="60" x2="1030" y2="300" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#60A5FA" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#5EEAD4" stop-opacity="0.05"/>
+    <linearGradient id="edge" x1="62" y1="0" x2="1125" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="0.52" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#5EEAD4"/>
     </linearGradient>
-    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="26"/>
+    <linearGradient id="surface" x1="750" y1="55" x2="1100" y2="315" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#152847"/>
+      <stop offset="1" stop-color="#0B182E"/>
+    </linearGradient>
+    <linearGradient id="line" x1="660" y1="70" x2="1140" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#5EEAD4" stop-opacity="0.18"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1090 68) rotate(130) scale(245 245)">
+      <stop stop-color="#22D3EE" stop-opacity="0.27"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(104 348) rotate(-28) scale(250 190)">
+      <stop stop-color="#2563EB" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" stroke="#8FD9FF" stroke-opacity="0.11" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.52"/>
     </filter>
+    <clipPath id="clip">
+      <rect width="1200" height="360" rx="28"/>
+    </clipPath>
   </defs>
-  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
-  <circle cx="1020" cy="70" r="135" fill="#22D3EE" fill-opacity="0.15" filter="url(#blur)"/>
-  <circle cx="180" cy="300" r="150" fill="#6366F1" fill-opacity="0.16" filter="url(#blur)"/>
-  <path d="M55 265C205 172 275 287 418 209C548 139 590 225 706 157C839 80 929 196 1146 78" stroke="url(#glow)" stroke-width="2"/>
-  <path d="M55 285C205 192 275 307 418 229C548 159 590 245 706 177C839 100 929 216 1146 98" stroke="#93C5FD" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="5 9"/>
-  <g opacity="0.95">
-    <circle cx="178" cy="188" r="7" fill="#5EEAD4"/>
-    <circle cx="418" cy="209" r="6" fill="#60A5FA"/>
-    <circle cx="706" cy="157" r="7" fill="#A7F3D0"/>
-    <circle cx="962" cy="138" r="5" fill="#BAE6FD"/>
-    <path d="M178 188L418 209L706 157L962 138" stroke="#67E8F9" stroke-opacity="0.32" stroke-width="1"/>
-  </g>
-  <text x="78" y="92" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="3">TEACH THE CODE / SHIP THE TOOL / LEAVE A TRACE</text>
-  <text x="78" y="166" fill="white" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="62" font-weight="700">XiaoCow</text>
-  <text x="82" y="208" fill="#BFDBFE" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24">Tools for the moment when answers need to become understanding.</text>
-  <text x="82" y="244" fill="#CCFBF1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18">让 AI 参与真实项目，也让真实问题回到代码里。</text>
-  <g transform="translate(890 235)">
-    <rect width="220" height="58" rx="15" fill="#0B1020" fill-opacity="0.55" stroke="#99F6E4" stroke-opacity="0.3"/>
-    <text x="22" y="25" fill="#99F6E4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">ship / inspect / learn</text>
-    <text x="22" y="44" fill="#E0F2FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">v0.∞ — still in progress</text>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect x="612" y="0" width="588" height="360" fill="url(#grid)" opacity="0.52"/>
+    <rect width="1200" height="5" fill="url(#edge)"/>
+    <circle cx="1090" cy="68" r="160" fill="url(#cyanGlow)"/>
+    <circle cx="104" cy="348" r="168" fill="url(#blueGlow)"/>
+
+    <!-- A quiet trace line, borrowed from the poster's process motif. -->
+    <path d="M622 276C697 245 717 293 777 262C841 230 860 259 918 222C978 184 1030 222 1158 138" stroke="url(#line)" stroke-width="2"/>
+    <path d="M622 294C697 263 717 311 777 280C841 248 860 277 918 240C978 202 1030 240 1158 156" stroke="#67E8F9" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="4 10"/>
+    <circle cx="777" cy="262" r="5" fill="#5EEAD4"/>
+    <circle cx="918" cy="222" r="5" fill="#60A5FA"/>
+    <circle cx="1035" cy="206" r="4" fill="#A7F3D0"/>
+
+    <!-- Left: personal identity and the point of view. -->
+    <text x="70" y="67" fill="#8BE9DE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" letter-spacing="2.3">XIAOCOW  /  PERSONAL BUILD LOG</text>
+    <rect x="70" y="86" width="42" height="4" rx="2" fill="#22D3EE"/>
+    <rect x="118" y="86" width="18" height="4" rx="2" fill="#60A5FA"/>
+    <rect x="142" y="86" width="8" height="4" rx="2" fill="#5EEAD4"/>
+    <text x="70" y="151" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="62" font-weight="800" letter-spacing="-2">XiaoCow</text>
+    <text x="73" y="181" fill="#93C5FD" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" letter-spacing="1.5">小靠  ·  AI / CODE / LEARNING</text>
+    <text x="72" y="221" fill="#F1F5F9" font-family="ui-sans-serif, system-ui, sans-serif" font-size="23" font-weight="700">让 AI 参与真实项目，</text>
+    <text x="72" y="252" fill="#F1F5F9" font-family="ui-sans-serif, system-ui, sans-serif" font-size="23" font-weight="700">也让答案留下过程。</text>
+    <text x="74" y="278" fill="#A9BDD9" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">Building tools for learning, agents, and the systems behind the demo.</text>
+
+    <g transform="translate(72 307)">
+      <rect width="102" height="27" rx="13.5" fill="#132B4A" stroke="#3B82F6" stroke-opacity="0.55"/>
+      <text x="16" y="18" fill="#BFDBFE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.8">BUILD</text>
+      <rect x="111" width="102" height="27" rx="13.5" fill="#103A43" stroke="#22D3EE" stroke-opacity="0.55"/>
+      <text x="127" y="18" fill="#A5F3FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.8">INSPECT</text>
+      <rect x="222" width="102" height="27" rx="13.5" fill="#123D39" stroke="#5EEAD4" stroke-opacity="0.55"/>
+      <text x="238" y="18" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.8">LEARN</text>
+    </g>
+
+    <!-- Right: a compact product poster instead of abstract decoration. -->
+    <g filter="url(#shadow)">
+      <rect x="675" y="42" width="449" height="263" rx="20" fill="#081426" fill-opacity="0.72" stroke="#8BDCF0" stroke-opacity="0.24"/>
+      <rect x="675" y="42" width="449" height="38" rx="20" fill="#10213D"/>
+      <path d="M675 61C675 50.5 683.5 42 694 42H1105C1115.5 42 1124 50.5 1124 61V80H675V61Z" fill="#10213D"/>
+      <circle cx="697" cy="61" r="4" fill="#FB7185"/>
+      <circle cx="712" cy="61" r="4" fill="#FBBF24"/>
+      <circle cx="727" cy="61" r="4" fill="#34D399"/>
+      <text x="755" y="66" fill="#93C5FD" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.4">CODESENSE  /  LIVE PRODUCT SURFACE</text>
+      <rect x="1039" y="54" width="65" height="16" rx="8" fill="#0B3D42" stroke="#5EEAD4" stroke-opacity="0.46"/>
+      <circle cx="1050" cy="62" r="3" fill="#5EEAD4"/>
+      <text x="1058" y="66" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" font-weight="700">IN USE</text>
+
+      <rect x="697" y="99" width="164" height="184" rx="12" fill="#0E1D35" stroke="#60A5FA" stroke-opacity="0.25"/>
+      <text x="714" y="124" fill="#5EEAD4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="1.1">FROM IDEA TO CODE</text>
+      <text x="714" y="151" fill="#F8FAFC" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="800">让编程学习</text>
+      <text x="714" y="175" fill="#F8FAFC" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="800">走向会思考</text>
+      <path d="M714 194H832" stroke="#334C70"/>
+      <text x="714" y="217" fill="#A9BDD9" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10">学生先写思路，再组装程序，</text>
+      <text x="714" y="234" fill="#A9BDD9" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10">最后用自己的话解释。</text>
+      <circle cx="721" cy="260" r="4" fill="#22D3EE"/>
+      <text x="733" y="264" fill="#BFDBFE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">STUDENT → TEACHER</text>
+
+      <rect x="879" y="99" width="223" height="184" rx="12" fill="url(#surface)" stroke="#8BDCF0" stroke-opacity="0.28"/>
+      <text x="897" y="123" fill="#8EA7CC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" letter-spacing="1.2">LEARNING LOOP  /  03</text>
+      <text x="897" y="151" fill="#DFF7FF" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="800">A bug is a place to begin.</text>
+      <rect x="897" y="168" width="181" height="26" rx="7" fill="#102C4D"/>
+      <circle cx="911" cy="181" r="4" fill="#60A5FA"/>
+      <text x="922" y="185" fill="#BFDBFE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700">01  THINK</text>
+      <rect x="897" y="201" width="181" height="26" rx="7" fill="#103B45"/>
+      <circle cx="911" cy="214" r="4" fill="#22D3EE"/>
+      <text x="922" y="218" fill="#A5F3FC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700">02  BUILD</text>
+      <rect x="897" y="234" width="181" height="26" rx="7" fill="#123D39"/>
+      <circle cx="911" cy="247" r="4" fill="#5EEAD4"/>
+      <text x="922" y="251" fill="#A7F3D0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700">03  EXPLAIN</text>
+    </g>
+    <text x="1094" y="331" text-anchor="end" fill="#6F8BAB" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.2">SHIP THE TOOL · LEAVE A TRACE</text>
   </g>
 </svg>
