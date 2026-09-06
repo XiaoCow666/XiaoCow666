@@ -1,40 +1,55 @@
-# XiaoCow / 小靠
+# 小靠 / XiaoCow
 
 <p align="center">
-  <img src="./assets/profile-banner.svg" alt="XiaoCow — building AI-native tools for learning and work" width="100%" />
+  <img src="./assets/profile-banner.svg" alt="XiaoCow — build tools that turn answers into understanding" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/XiaoCow666/CodeSense"><img src="https://img.shields.io/badge/Building-CodeSense-2457D6?style=flat-square&logo=github&logoColor=white" alt="CodeSense" /></a>
-  <a href="https://github.com/XiaoCow666/Caifusi"><img src="https://img.shields.io/badge/Exploring-Caifusi-0B8F87?style=flat-square&logo=react&logoColor=white" alt="Caifusi" /></a>
-  <a href="https://saucodesense.com"><img src="https://img.shields.io/badge/Live-saucodesense.com-111827?style=flat-square&logo=google-chrome&logoColor=white" alt="Live demo" /></a>
+  <a href="https://github.com/XiaoCow666/CodeSense"><img src="https://img.shields.io/badge/主要项目-CodeSense-2457D6?style=flat-square&logo=github&logoColor=white" alt="CodeSense" /></a>
+  <a href="https://github.com/XiaoCow666/Caifusi"><img src="https://img.shields.io/badge/正在探索-Caifusi-0B8F87?style=flat-square&logo=react&logoColor=white" alt="Caifusi" /></a>
+  <a href="https://saucodesense.com"><img src="https://img.shields.io/badge/在线体验-saucodesense.com-111827?style=flat-square&logo=google-chrome&logoColor=white" alt="Live demo" /></a>
 </p>
 
-## Hello, I'm XiaoCow
+> 我在做一件有点固执的事：让 AI 不要急着把答案递给人，而是先把人带到答案附近。
+>
+> I build tools for the moment when “I have the answer” is not the same as “I understand it.”
 
-我是一名计算机专业学生，也是一名还在持续试错的 AI-native builder。我的兴趣点不只在模型本身，而在模型真正进入项目之后会发生什么：它能不能调用工具，能不能留下证据，能不能让学生学会，而不是替学生交作业。
+## 先说我在做什么
 
-I build AI-assisted products for learning, work, and the messy middle in between. My current threads are LLM applications, agents, MCP, programming education, financial literacy, and privacy-aware machine learning.
+我是一名计算机专业学生，主要做 AI 应用、编程教育工具和 Agent 工作流。最近的项目都围绕同一个问题展开：当 AI 参与学习和工作时，怎样让它真的帮上忙，同时保留过程、边界和可以复查的证据。
 
-我喜欢把一个想法推到可以运行的位置，再回头处理架构、权限、日志、体验和团队协作。代码只是其中一段，能让别人接手、复现、继续改，才算真的做完。
+I am a computer science student building AI-assisted products for learning and work. I care about the part after the demo: tool calls, permissions, failure cases, handoffs, and whether another person can actually run what I built.
 
-## What I'm building
+## 一条不太短的时间线
 
-### CodeSense 酷森思
+```text
+late 2024  Cursor
+           “AI 能不能让我更快写出东西？”
 
-**An AI-assisted programming education platform for universities.**
+2025       CodeSense
+           “如果 AI 直接给答案，学生还剩下什么？”
 
-CodeSense started with a simple frustration: an Online Judge can tell a student that the answer is wrong, but it usually cannot explain where the understanding broke. The platform connects code evaluation, restricted execution, guided learning, and teacher-facing learning analytics in one workflow.
+2026       Agents / MCP / OpenClaw / Feishu workflows
+           “工具真的执行过了吗？过程能不能留下来？”
+```
 
-学生不会直接跳到“让 AI 给答案”。一份练习会经过三步：先描述思路，再组装程序步骤，最后用自己的话向 AI 解释代码。系统把提交结果、编译运行证据和学习过程放在一起，教师可以从班级、作业和知识点三个视角查看进展。
+我没有把这些问题想成一套漂亮的方法论。很多时候，它们是在一次次部署失败、答辩追问、学生反馈和活动现场的“怎么又报错了”里长出来的。现在我更相信可运行的证据，也更愿意把失败记录下来。
 
-| 方向 | 当前实现 |
-| --- | --- |
-| 评测 | C++17 编译、测试用例、编译错误、运行时错误、超时和输出规范化 |
-| 受限执行 | 临时工作目录、超时控制、输出长度限制和执行后清理 |
-| 引导学习 | 思路描述 → 步骤组装 → 费曼式解释 |
-| 教师视图 | 作业、班级、花名册、提交记录和知识点趋势 |
-| 技术栈 | Python、Flask、SQLAlchemy、SQLite/MySQL、Redis/文件会话、Monaco Editor、Chart.js |
+## 主线项目：CodeSense 酷森思
+
+### 让代码评测离“对 / 错”再近一点学习
+
+[CodeSense](https://github.com/XiaoCow666/CodeSense) 是一个面向高校编程教学的代码评测与学习平台。
+
+普通 OJ 很擅长告诉学生程序通过了没有。问题是，学生看到 WA 之后，往往仍然不知道自己错在算法、实现、边界条件，还是根本没有理解题目。CodeSense 把代码提交、受限执行、AI 辅导、分阶段练习和教师学情视图放进同一条流程里。
+
+一次练习会经过三站：
+
+1. 学生先用自然语言描述思路。
+2. 再逐步组装程序步骤并提交代码。
+3. 最后尝试用自己的话解释程序，接受追问，再回去修改。
+
+系统记录的不只是最后得了几分，也包括编译错误、运行结果、提示请求和学习过程。教师可以查看作业、班级、提交记录和知识点趋势。AI 仍然会犯错，所以最终判断回到程序评测和教师反馈。
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/XiaoCow666/CodeSense/main/docs/assets/codesense-login.png" alt="CodeSense login page" width="31%" />
@@ -42,62 +57,61 @@ CodeSense started with a simple frustration: an Online Judge can tell a student 
   <img src="https://raw.githubusercontent.com/XiaoCow666/CodeSense/main/docs/assets/codesense-teacher-dashboard.png" alt="CodeSense teacher dashboard" width="31%" />
 </p>
 
-→ [Repository](https://github.com/XiaoCow666/CodeSense) · [Live demo](https://saucodesense.com) · [中文文档](https://github.com/XiaoCow666/CodeSense/blob/main/README.md) · [English docs](https://github.com/XiaoCow666/CodeSense/blob/main/README.en.md)
+```text
+学生：描述思路 → 组装步骤 → 解释代码 → 再提交
+教师：布置作业 → 查看提交 → 观察知识点 → 找到共性问题
+系统：编译运行 → 保存证据 → 给出提示 → 把人送回思考现场
+```
+
+→ [GitHub](https://github.com/XiaoCow666/CodeSense) · [在线体验](https://saucodesense.com) · [中文 README](https://github.com/XiaoCow666/CodeSense/blob/main/README.md) · [English README](https://github.com/XiaoCow666/CodeSense/blob/main/README.en.md)
+
+## 另外两条线
 
 ### Caifusi 财赋思
 
-**An AI-powered financial mindset coach for university students.**
+[Caifusi](https://github.com/XiaoCow666/Caifusi) 是一个面向大学生的 AI 财商教练。
 
-Caifusi is about the part of financial education that rarely fits into a spreadsheet: why a person makes a choice, what they are worried about, and what small action they can take next. I am exploring conversational learning, knowledge bases, risk reminders, and action planning for campus scenarios.
+我对它感兴趣，是因为财商教育经常被讲成表格和结论，但真实的选择往往夹着犹豫、冲动和“我知道这样不太好，可是……”这类时刻。项目正在探索对话式学习、知识库、风险提醒和行动计划，让建议更接近一个人下一步真的能做的事。
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/XiaoCow666/CodeSense/main/docs/assets/caifusi-logo-wordmark-v1.png" alt="Caifusi logo" width="300" />
 </p>
 
-→ [Repository](https://github.com/XiaoCow666/Caifusi)
-
 ### Fair-Fed-CI
 
-**A research prototype for privacy-preserving and subpopulation-fair student performance prediction.**
+[Fair-Fed-CI](https://github.com/XiaoCow666/Fair-Fed-CI) 是一条关于联邦学习、公平性和可解释性的研究实践线。
 
-This line of work looks at federated learning, personalized constraints, feature and self-attention, and SHAP-based explanations. The goal is to make model outputs more useful without pretending that a single score can describe a student. The research notes, parameters, and results are kept separate from confirmed experiments until they are reproducible.
+它尝试讨论一个不太舒服的问题：如果模型要预测学生表现，怎样减少敏感属性带来的不公平，同时还让人知道模型为什么这样判断。当前仓库更适合看作研究原型；参数、数据集和实验结果，我会以可复现实验为准，不靠一段听起来很厉害的摘要来盖章。
 
-→ [Repository](https://github.com/XiaoCow666/Fair-Fed-CI)
+## 我在项目里通常会做的事
 
-## A short version of my story
+- 把聊天里的模糊想法整理成 PRD、技术方案和验收条件。
+- 让 AI 参与代码工作，但把工具调用、权限、日志和回滚点留清楚。
+- 把一次活动里遇到的故障，变成下一版教程里的检查项。
+- 让新成员先写一份项目理解 PR，再开始改代码。
+- 把“已经实现”“外部服务”“准备以后做”分开写。
 
-I got interested in AI-assisted development through Cursor near the end of 2024. At first, the obvious question was “how fast can this help me write code?” The more interesting question arrived later: “what should the system refuse to do, and what should it teach instead?”
-
-That question pulled me toward CodeSense. It also changed how I work on projects. I now care about the whole loop: clarify the need, write down the acceptance criteria, build a small path that can run, inspect the evidence, and leave a clean handoff for the next person.
-
-Outside the repositories, I help organize and support AI-related campus activities, including AI+X sessions and OpenClaw/QClaw workshops in Shenyang. A good event is not just a talk. Someone has to make the setup work, answer the strange error at the back of the room, collect the failure cases, and turn them into the next version of the tutorial.
-
-## My working notes
+项目协作大致长这样：
 
 ```text
-idea
-  ↓
-requirements + evidence
-  ↓
-PRD → technical plan → implementation
-  ↓
-test → deploy → review
-  ↓
-document what changed, what failed, and what should happen next
+问题 → 需求 → 可运行的小路径 → 测试与证据 → PR → 部署 → 复盘
 ```
 
-I use AI as a collaborator with tools, boundaries, and a paper trail. LLMs, agents, MCP servers, OpenClaw, Cursor, and Feishu workflows are useful when they shorten the distance between a question and a verifiable result. They are less useful when they produce confident text that nobody can run.
+这条链听上去不酷，但它能在项目交接、比赛答辩和现场救火时少制造一点惊喜。
 
-## Things I care about
+## 在代码之外
 
-- AI that helps people understand a problem instead of hiding the reasoning.
-- Learning systems that record process, not only the final score.
-- Privacy and fairness when models touch student data.
-- Small, readable interfaces that make the next action obvious.
-- Projects with enough documentation for a new contributor to get started.
-- Communities where people bring a broken demo and leave with a better one.
+我也参与沈阳和沈航相关的 AI 校园活动、AI+X 高校行以及 OpenClaw/QClaw 活动的组织和助教工作。现场最有价值的时刻通常不是讲师顺利讲完，而是有人卡在安装、网络或配置上，大家一起把问题拆开，最后让 demo 跑起来。
 
-## Tools I reach for
+我还保留了不少 CodeSense 的 bug 截图和问题记录。它们看起来有点狼狈，却比“体验很好，后续优化”更能帮助下一次设计。
+
+## 我愿意聊什么
+
+AI 教学工具、Agent 工程、MCP、代码评测、联邦学习、公平与可解释机器学习、校园技术社区，以及如何把一个想法从聊天窗口拖进真正能运行的项目里。
+
+如果你也在做类似的东西，欢迎直接发仓库或失败日志。一个能运行但不完美的 demo，通常比一份宏大规划更适合开始聊天。
+
+## 技术工具箱
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -107,35 +121,23 @@ I use AI as a collaborator with tools, boundaries, and a paper trail. LLMs, agen
   <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="GitHub Actions" />
   <img src="https://img.shields.io/badge/LLM%20%7C%20Agents%20%7C%20MCP-111827?style=flat-square&logo=openai&logoColor=white" alt="LLM Agents MCP" />
 </p>
 
-## Current focus
-
-- Making CodeSense easier to deploy, understand, and extend.
-- Turning project conversations into PRs, issues, release notes, and reusable docs.
-- Exploring multi-agent workflows with real tool calls and observable execution.
-- Continuing research around federated learning, fairness, and explainability.
-- Building practical AI learning experiences for students and campus communities.
-
-## GitHub at a glance
+## GitHub 入口
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=XiaoCow666&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" alt="XiaoCow's GitHub stats" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=XiaoCow666&layout=compact&hide_border=true&theme=transparent&langs_count=8" alt="Top languages" height="165" />
+  <a href="https://github.com/XiaoCow666/CodeSense"><img src="https://github-readme-stats.vercel.app/api/pin/?username=XiaoCow666&repo=CodeSense&theme=transparent&hide_border=true" alt="CodeSense repository card" /></a>
+  <a href="https://github.com/XiaoCow666/Caifusi"><img src="https://github-readme-stats.vercel.app/api/pin/?username=XiaoCow666&repo=Caifusi&theme=transparent&hide_border=true" alt="Caifusi repository card" /></a>
 </p>
 
-## Find me here
+<p align="center">
+  <a href="https://github.com/XiaoCow666"><img src="https://img.shields.io/github/followers/XiaoCow666?style=social" alt="GitHub followers" /></a>
+  <a href="https://github.com/XiaoCow666?tab=repositories"><img src="https://img.shields.io/github/stars/XiaoCow666?affiliations=OWNER&style=social" alt="GitHub stars" /></a>
+</p>
 
-- Code and experiments: [github.com/XiaoCow666](https://github.com/XiaoCow666)
-- CodeSense: [github.com/XiaoCow666/CodeSense](https://github.com/XiaoCow666/CodeSense)
-- Caifusi: [github.com/XiaoCow666/Caifusi](https://github.com/XiaoCow666/Caifusi)
-- Fair-Fed-CI: [github.com/XiaoCow666/Fair-Fed-CI](https://github.com/XiaoCow666/Fair-Fed-CI)
-- CodeSense demo: [saucodesense.com](https://saucodesense.com)
-
-如果你对 AI 教学工具、Agent 工程、MCP、校园技术社区，或者“怎样让一个项目真的能被别人用起来”感兴趣，欢迎来聊。带着问题来更好，带着一个能运行的 demo 来也行。
+我不会在这里写一串没有证据的数字。奖项、用户数、部署规模和实验指标，应该能回到仓库、日志、证书或公开公告里。
 
 <p align="center">
-  <i>Still learning. Still shipping. Still leaving notes for future me.</i>
+  <i>Still learning. Still shipping. Still keeping the weird bug screenshots.</i>
 </p>
