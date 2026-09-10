@@ -1,8 +1,6 @@
-# 小靠 / XiaoCow
-
-<p align="center">
-  <img src="./assets/profile-hero-abstract.png" alt="Abstract flow of learning, building, and turning ideas into action" width="100%" />
-</p>
+<div align="center">
+  <img src="./assets/profile-banner.gif" alt="XiaoCow personal build log" width="100%" />
+</div>
 
 <p align="center">
   <a href="https://github.com/XiaoCow666/CodeSense"><img src="https://img.shields.io/badge/主要项目-CodeSense-2457D6?style=flat-square&logo=github&logoColor=white" alt="CodeSense" /></a>
@@ -10,11 +8,23 @@
   <a href="https://saucodesense.com"><img src="https://img.shields.io/badge/在线体验-saucodesense.com-111827?style=flat-square&logo=google-chrome&logoColor=white" alt="Live demo" /></a>
 </p>
 
+<p align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=21&duration=3200&pause=900&color=2563EB&center=true&vCenter=true&width=720&lines=AI+for+learning+%7C+Agents+for+work;Building+CodeSense+%26+Caifusi;MCP+%7C+OpenClaw+%7C+Feishu+workflows;Still+learning.+Still+shipping.+%F0%9F%9A%80" alt="Typing introduction" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=XiaoCow666&label=Profile%20views&color=2563EB&style=flat-square" alt="Profile views" />
+  <a href="https://github.com/XiaoCow666?tab=repositories"><img src="https://img.shields.io/github/stars/XiaoCow666?affiliations=OWNER&style=flat-square&logo=github&label=repository%20stars" alt="Repository stars" /></a>
+  <a href="https://saucodesense.com"><img src="https://img.shields.io/badge/Live-saucodesense.com-0B8F87?style=flat-square&logo=google-chrome&logoColor=white" alt="Live website" /></a>
+</p>
+
 > 我在做一件有点固执的事：让 AI 不要急着把答案递给人，而是先把人带到答案附近。
 >
 > I build tools for the moment when “I have the answer” is not the same as “I understand it.”
 
-## 先说我在做什么
+## 🧭 我在做什么
 
 我是一名计算机专业学生，主要做 AI 应用、编程教育工具和 Agent 工作流。最近的项目都围绕同一个问题展开：当 AI 参与学习和工作时，怎样让它真的帮上忙，同时保留过程、边界和可以复查的证据。
 
@@ -152,16 +162,14 @@ AI 教学工具、Agent 工程、MCP、代码评测、联邦学习、公平与�
 
 如果你也在做类似的东西，欢迎直接发仓库或失败日志。一个能运行但不完美的 demo，通常比一份宏大规划更适合开始聊天。
 
-## 技术工具箱
+## 🛠️ 技术工具箱
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=111827" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" />
-  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,cpp,js,react,flask,docker,git,github,linux&perline=9" alt="Python, C++, JavaScript, React, Flask, Docker, Git, GitHub, and Linux" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/LLM%20%7C%20Agents%20%7C%20MCP-111827?style=flat-square&logo=openai&logoColor=white" alt="LLM Agents MCP" />
 </p>
 
@@ -178,9 +186,24 @@ AI 教学工具、Agent 工程、MCP、代码评测、联邦学习、公平与�
   <a href="https://github.com/XiaoCow666/Fair-Fed-CI">Fair-Fed-CI</a>
 </p>
 
+## 📊 GitHub activity
+
+<div align="center">
+  <img height="165" src="https://github-readme-stats-two-kappa-29.vercel.app/api?username=XiaoCow666&show_icons=true&include_all_commits=true&rank_icon=github&theme=tokyonight&hide_border=true" alt="XiaoCow's GitHub stats" />
+  <img height="165" src="https://streak-stats.demolab.com?user=XiaoCow666&theme=tokyonight&hide_border=true" alt="XiaoCow's GitHub streak" />
+</div>
+
 <p align="center">
-  <a href="https://github.com/XiaoCow666"><img src="https://img.shields.io/github/followers/XiaoCow666?style=social" alt="GitHub followers" /></a>
-  <a href="https://github.com/XiaoCow666?tab=repositories"><img src="https://img.shields.io/github/stars/XiaoCow666?affiliations=OWNER&style=social" alt="GitHub stars" /></a>
+  <img src="https://github-readme-stats-two-kappa-29.vercel.app/api/top-langs/?username=XiaoCow666&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" alt="XiaoCow's top languages" />
+</p>
+
+## 🐍 Contribution Snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/XiaoCow666/XiaoCow666/output/github-contribution-grid-snake-dark.svg" />
+    <img src="https://raw.githubusercontent.com/XiaoCow666/XiaoCow666/output/github-contribution-grid-snake.svg" alt="Contribution snake animation" />
+  </picture>
 </p>
 
 <p align="center">
